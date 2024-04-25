@@ -1,0 +1,47 @@
+/* ########################################
+############# CUSTOM FONTS ################
+######################################## */
+
+/// Provide variable fonts as main format.
+@font-face {
+  font-family: 'Manrope VF';
+  src:
+    local('Manrope'),
+    url('/assets/fonts/manrope/Manrope-VariableFont_wght.woff2')
+      format('woff2-variations'),
+    url('//assets/fonts/manrope/Manrope-VariableFont_wght.woff')
+      format('woff-variations'),
+    url('/assets/fonts/manrope/Manrope-VariableFont_wght.ttf')
+      format('truetype-variations');
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+}
+
+/// Provide static fonts as a fallback.
+@font-face {
+  font-family: 'Manrope';
+  src:
+    local('Manrope'),
+    url('/assets/fonts/manrope/static/Manrope-Medium.woff2') format('woff2'),
+    url('/assets/fonts/manrope/static/Manrope-Medium.woff') format('woff'),
+    url('/assets/fonts/manrope/static/Manrope-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Manrope';
+  src:
+    local('Manrope'),
+    url('/assets/fonts/manrope/static/Manrope-Bold.woff2') format('woff2'),
+    url('/assets/fonts/manrope/static/Manrope-Bold.woff') format('woff'),
+    url('/assets/fonts/manrope/static/Manrope-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/// @type List
+$font-family-body: 'Manrope', sans-serif !default;
+$font-family-body-VF: 'Manrope VF', sans-serif !default;

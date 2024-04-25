@@ -1,0 +1,12 @@
+@import './variables/typography';
+
+body {
+  font-family: $font-family-body;
+  @supports (font-variation-settings: normal) {
+    font-family: $font-family-body-VF;
+  }
+}
+
+.wrapper {
+  min-height: 100dvh;
+}
