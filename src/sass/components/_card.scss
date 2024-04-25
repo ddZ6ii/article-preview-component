@@ -7,11 +7,17 @@
   }
 
   & .card-thumbnail {
-    width: 100%;
-    aspect-ratio: 16 / 9;
     @include media-breakpoint-up('lg') {
-      max-width: 40%;
-      object-position: left center;
+      min-width: 40%;
+    }
+    & img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16 / 9;
+      @include media-breakpoint-up('lg') {
+        height: 100%;
+        object-position: left center;
+      }
     }
   }
 

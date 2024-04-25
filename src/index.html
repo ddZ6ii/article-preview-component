@@ -28,13 +28,31 @@
         <div
           class="card bg-white border-0 rounded-3 mx-auto flex-lg-row overflow-hidden shadow"
         >
-          <img
-            src="/assets/images/drawers.jpg"
-            alt=""
-            width="660"
-            height="528"
-            class="card-thumbnail img-fluid object-fit-cover"
-          />
+          <picture class="card-thumbnail">
+            <source
+              type="image/webp"
+              sizes="(min-width: 992px) 320px, 400px"
+              srcset="
+                /assets/images/drawers-400.webp   400w,
+                /assets/images/drawers-800.webp   800w,
+                /assets/images/drawers-1200.webp 1200w
+              "
+            />
+            <img
+              sizes="(min-width: 992px) 320px, 400px"
+              srcset="
+                /assets/images/drawers-400.jpg   400w,
+                /assets/images/drawers-800.jpg   800w,
+                /assets/images/drawers-1200.jpg 1200w
+              "
+              src="/assets/images/drawers-400.jpg"
+              alt=""
+              width="400"
+              height="320"
+              class="img-fluid object-fit-cover"
+            />
+          </picture>
+
           <div>
             <div class="card-body">
               <h1 class="text-custom-neutral-600 card-title mb-3">
@@ -50,13 +68,28 @@
             <footer
               class="card-footer bg-white d-flex flex-wrap align-items-center gap-3 border-0 position-relative"
             >
-              <img
-                src="/assets/images/avatar-michelle.jpg"
-                alt=""
-                width="175"
-                height="175"
-                class="img-fluid rounded-circle card-avatar"
-              />
+              <picture>
+                <source
+                  srcset="
+                    /assets/images/avatar-michelle-48.webp  1x,
+                    /assets/images/avatar-michelle-96.webp  2x,
+                    /assets/images/avatar-michelle-144.webp 3x
+                  "
+                />
+                <img
+                  srcset="
+                    /assets/images/avatar-michelle-48.jpg  1x,
+                    /assets/images/avatar-michelle-96.jpg  2x,
+                    /assets/images/avatar-michelle-144.jpg 3x
+                  "
+                  src="/assets/images/avatar-michelle-48.jpg"
+                  alt=""
+                  width="48"
+                  height="48"
+                  class="img-fluid rounded-circle card-avatar"
+                />
+              </picture>
+
               <div>
                 <h2 class="card-subtitle fw-bold text-custom-neutral-600">
                   Michelle Appleton
