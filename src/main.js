@@ -34,6 +34,16 @@ window.addEventListener('resize', (e) => {
       ...BASE_OPTIONS,
       container: newContainerOption,
     });
+
     containerOption = newContainerOption;
+  }
+});
+
+popoverTriggerEl.addEventListener('click', (e) => {
+  const isExpanded = e.target.hasAttribute('aria-expanded');
+  if (isExpanded) {
+    e.target.removeAttribute('aria-expanded');
+  } else {
+    e.target.setAttribute('aria-expanded', 'true');
   }
 });

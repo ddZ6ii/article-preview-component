@@ -2,22 +2,36 @@
 @import '../variables';
 
 .btn[data-bs-toggle='popover'] {
-  color: $custom-neutral-400;
+  min-width: 2.5em;
+  aspect-ratio: 1 / 1;
+
   @include media-breakpoint-down('lg') {
     z-index: 9999;
   }
 
   &:focus-visible {
+    box-shadow: none;
     border-color: transparent;
+    outline: 2px solid rgba($blue-300, 1);
+    outline-offset: 4px;
   }
 
-  &[aria-describedBy^='popover'] {
-    box-shadow: inset 0 2px 2px 0 rgba($white, 1);
+  & svg {
+    pointer-events: none;
+    & path {
+      fill: $custom-neutral-400;
+    }
+  }
+
+  &[aria-expanded] {
     background-color: $custom-neutral-600;
-    color: $white;
+
     @include media-breakpoint-down('lg') {
-      box-shadow: none;
       background-color: $custom-neutral-400;
+    }
+
+    & svg path {
+      fill: $white;
     }
   }
 }
@@ -37,7 +51,7 @@
   // Extend styling (desktop-first since popovers are not mobile-friendly).
   padding: 1rem 2rem;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: center;
   justify-content: space-between;
   border: none;
@@ -49,8 +63,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 0.5rem;
+    gap: 1rem;
     color: $white;
+
+    & a:is(:hover, :focus-visible) svg path {
+      fill: $custom-neutral-200;
+    }
   }
 
   @include media-breakpoint-down('lg') {
