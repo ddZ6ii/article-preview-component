@@ -1,0 +1,31 @@
+@import '@bootstrap/mixins';
+
+.card {
+  max-width: 400px;
+  @include media-breakpoint-up('lg') {
+    max-width: 800px;
+  }
+
+  & .card-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    @include media-breakpoint-up('lg') {
+      max-width: 40%;
+      object-position: left center;
+    }
+  }
+
+  & .card-body {
+    padding-inline: 2.5rem;
+  }
+
+  & .card-avatar {
+    max-width: 48px;
+    aspect-ratio: 1 / 1;
+  }
+
+  & .card-btn {
+    width: min-content;
+    aspect-ratio: 1 / 1;
+  }
+}

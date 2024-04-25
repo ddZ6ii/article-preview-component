@@ -1,12 +1,35 @@
-@import './variables/typography';
+@import 'variables';
 
 body {
+  line-height: 1.75;
   font-family: $font-family-body;
   @supports (font-variation-settings: normal) {
     font-family: $font-family-body-VF;
   }
+  font-size: 0.8125rem;
+  font-weight: 500;
 }
 
-.wrapper {
+h1,
+h2 {
+  line-height: 1.5;
+  font-size: 1.025rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 0.875rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
   min-height: 100dvh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  gap: 1rem;
 }

@@ -48,7 +48,7 @@ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 // @import '@bootstrap/button-group';
 // @import '@bootstrap/nav';
 // @import '@bootstrap/navbar';
-// @import '@bootstrap/card';
+@import '@bootstrap/card';
 // @import '@bootstrap/accordion';
 // @import '@bootstrap/breadcrumb';
 // @import '@bootstrap/pagination';
@@ -60,7 +60,7 @@ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 // @import '@bootstrap/toasts';
 // @import '@bootstrap/modal';
 // @import '@bootstrap/tooltip';
-// @import '@bootstrap/popover';
+@import '@bootstrap/popover';
 // @import '@bootstrap/carousel';
 // @import '@bootstrap/spinners';
 // @import '@bootstrap/offcanvas';
@@ -74,3 +74,4 @@ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 ///
 /// 5. Import additional custom sass files (optional)
 @import 'base';
+@import 'components';

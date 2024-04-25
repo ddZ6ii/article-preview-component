@@ -15,42 +15,86 @@
     <meta name="theme-color" content="#FFFFFF" />
     <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
     <link rel="stylesheet" href="./sass/main.scss" />
+    <script
+      src="https://kit.fontawesome.com/bdb4be7c2a.js"
+      crossorigin="anonymous"
+    ></script>
     <script type="module" src="./main.js" defer></script>
     <title>Frontend Mentor | Article preview component</title>
   </head>
-  <body>
-    <main>
-      <div>
-        <img src="/assets/images/drawers.jpg" alt="" />
-        <h1>
-          Shift the overall look and feel by adding these wonderful touches to
-          furniture in your home
-        </h1>
-        <p>
-          Ever been in a room and felt like something was missing? Perhaps it
-          felt slightly bare and uninviting. I&apos;ve got some simple tips to
-          help you make any room feel complete.
+  <body class="bg-custom-neutral-50">
+    <div class="container">
+      <main>
+        <div
+          class="card bg-white border-0 rounded-3 mx-auto flex-lg-row overflow-hidden shadow"
+        >
+          <img
+            src="/assets/images/drawers.jpg"
+            alt=""
+            width="660"
+            height="528"
+            class="card-thumbnail img-fluid object-fit-cover"
+          />
+          <div class="card-body mt-4">
+            <h1 class="text-custom-neutral-600 card-title mb-3">
+              Shift the overall look and feel by adding these wonderful touches
+              to furniture in your home
+            </h1>
+            <p class="card-text text-custom-neutral-400">
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I&apos;ve got some simple
+              tips to help you make any room feel complete.
+            </p>
+            <footer
+              class="card-footer bg-white d-flex flex-wrap align-items-center gap-3 px-0 border-0 mt-4"
+            >
+              <img
+                src="/assets/images/avatar-michelle.jpg"
+                alt=""
+                width="175"
+                height="175"
+                class="img-fluid rounded-circle card-avatar"
+              />
+              <div>
+                <h2 class="card-subtitle fw-bold text-custom-neutral-600">
+                  Michelle Appleton
+                </h2>
+                <p class="m-0 text-custom-neutral-400">28 Jun 2020</p>
+              </div>
+              <button
+                type="button"
+                class="btn btn-custom-neutral-50 card-btn rounded-circle border-0 ms-auto"
+                data-bs-toggle="button"
+                aria-pressed="false"
+                aria-label="Share article on social media"
+              >
+                <i
+                  class="fa-solid fa-share text-custom-neutral-400 lh-base"
+                ></i>
+              </button>
+            </footer>
+          </div>
+        </div>
+      </main>
+
+      <footer class="text-center text-black small">
+        <p class="m-0 p-2">
+          Challenge by
+          <a
+            href="https://www.frontendmentor.io?ref=challenge"
+            title="Visit the website"
+            class="footer-link link-offset-1"
+            >Frontend Mentor</a
+          >. <br />
+          Coded with <span class="text-danger">❤</span> by
+          <a
+            href="https://github.com/ddZ6ii"
+            title="Visit Github profile"
+            class="footer-link link-offset-1"
+            >ddZ6ii</a
+          >.
         </p>
-        <footer>
-          <img src="/assets/images/avatar-michelle.jpg" alt="" />
-          <h2>Michelle Appleton</h2>
-          <p>28 Jun 2020</p>
-          <button type="button">Share</button>
-        </footer>
-      </div>
-    </main>
-    <footer>
-      <p>
-        Challenge by
-        <a
-          href="https://www.frontendmentor.io?ref=challenge"
-          title="Visit the website"
-          >Frontend Mentor</a
-        >. Coded with <span>❤</span> by
-        <a href="https://github.com/ddZ6ii" title="Visit Github profile"
-          >ddZ6ii</a
-        >.
-      </p>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

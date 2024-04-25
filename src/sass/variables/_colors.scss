@@ -3,9 +3,10 @@
 ######################################## */
 
 /// @type Color
+$custom-primary: #0b62e4 !default;
 $custom-neutral-50: #ecf2f8 !default; // Light Grayish Blue
 $custom-neutral-200: #9eafc2 !default; //  Grayish Blue
-$custom-neutral-400: #6d7f97 !default; // Desaturated Dark Blue
+$custom-neutral-400: #67788f !default; // Desaturated Dark Blue
 $custom-neutral-600: #48556a !default; // Very Dark Grayish Blue
 
 /// Custom color map
@@ -16,4 +17,11 @@ $custom-theme-colors: (
   'custom-neutral-200': $custom-neutral-200,
   'custom-neutral-400': $custom-neutral-400,
   'custom-neutral-600': $custom-neutral-600,
+);
+
+/// Custom gradient
+$custom-gradient: linear-gradient(
+  to bottom,
+  rgba($custom-neutral-400, 0),
+  rgba($custom-neutral-600, 0)
 );

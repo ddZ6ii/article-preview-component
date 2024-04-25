@@ -1,0 +1,18 @@
+@import '../variables';
+
+.footer-link {
+  &,
+  &:link {
+    color: $custom-primary;
+  }
+  &:visited {
+    color: $custom-neutral-400;
+  }
+  &:focus-visible {
+    color: $primary;
+    text-decoration: none;
+  }
+  &:active {
+    color: $orange-500;
+  }
+}
