@@ -1,12 +1,12 @@
 @charset 'utf-8';
 
-/// Customize Bootstrap's sass to override or extend the base config.
+/// Customize Bootstrap's sass to extend the base config.
 ///
-/// Note: Bootstrap does not currently support the use of the new `@use` sass directive, thus we still need to use the old `@import` directive.
-
-/// Include only the parts of Bootstrap's sass you need
-/// Note: the order of instructions matters!
-/// Note: some Bootstrap's stylesheets are required no matter what!
+/// Import strategy: only include Bootstrap's sass we need.
+///
+/// Note 1: the order of instructions matters! Some Bootstrap's stylesheets are required no matter what!
+///
+/// Note 2: Bootstrap does not currently support the use of the new `@use` sass directive, thus we still need to use the old `@import` directive.
 ///
 /// 1. First import function and variables configuration
 @import '@bootstrap/functions';
@@ -14,13 +14,15 @@
 /// 2. Override Bootstrap's Sass global options and default variables (optional)
 $enable-gradients: true;
 $enable-shadows: true;
-$prefix: 'mo-';
 ///
 /// 2. Extend Bootstrap's theme map (optional)
 /// 2.1. First import variables configuration
 @import '@bootstrap/variables';
+///
 /// 2.2 Import custom theme map
 @import 'variables/colors';
+@import 'components/popover';
+///
 /// 2.3 Merge it with Bootstrap's theme map
 $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 ///
@@ -40,31 +42,9 @@ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 @import '@bootstrap/images';
 @import '@bootstrap/containers';
 @import '@bootstrap/grid';
-// @import '@bootstrap/tables';
-// @import '@bootstrap/forms';
 @import '@bootstrap/buttons';
-// @import '@bootstrap/transitions';
-// @import '@bootstrap/dropdown';
-// @import '@bootstrap/button-group';
-// @import '@bootstrap/nav';
-// @import '@bootstrap/navbar';
 @import '@bootstrap/card';
-// @import '@bootstrap/accordion';
-// @import '@bootstrap/breadcrumb';
-// @import '@bootstrap/pagination';
-// @import '@bootstrap/badge';
-// @import '@bootstrap/alert';
-// @import '@bootstrap/progress';
-// @import '@bootstrap/list-group';
-// @import '@bootstrap/close';
-// @import '@bootstrap/toasts';
-// @import '@bootstrap/modal';
-// @import '@bootstrap/tooltip';
 @import '@bootstrap/popover';
-// @import '@bootstrap/carousel';
-// @import '@bootstrap/spinners';
-// @import '@bootstrap/offcanvas';
-// @import '@bootstrap/placeholders';
 ///
 /// 4.2. Helpers
 @import '@bootstrap/helpers';

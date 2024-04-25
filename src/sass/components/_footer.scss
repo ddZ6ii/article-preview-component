@@ -10,6 +10,7 @@
   }
   &:focus-visible {
     color: $primary;
+    outline-color: $primary;
     text-decoration: none;
   }
   &:active {

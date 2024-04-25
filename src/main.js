@@ -1,11 +1,39 @@
-/// -----------------------------------------------------------------------------
-/// OPTION 1: import all of Bootstrap's JS
-// import * as bootstrap from 'bootstrap'
-/// -----------------------------------------------------------------------------
+/// Import only needed Bootstrap components.
+import { Popover } from 'bootstrap';
 
-/// -----------------------------------------------------------------------------
-/// OPTION 2: only import needed Bootstrap components
-// import { Tooltip, Toast, Popover, Collapse.. } from 'bootstrap';
-/// -----------------------------------------------------------------------------
+const popoverTriggerEl = document.querySelector('[data-bs-toggle="popover"]');
 
-console.log('Hello World!');
+const DESKTOP_BREAKPOINT = 992;
+
+const BASE_OPTIONS = {
+  html: true,
+  title: document.querySelector('[data-name="popover-title"]'),
+  content: document.querySelector('[data-name="popover-content"]'),
+};
+
+let popover = null;
+let containerOption = null;
+
+const getContainerOption = (screenWidth) => (screenWidth < DESKTOP_BREAKPOINT ? '.card-footer' : 'body');
+
+const createPopover = (popoverEl, options) => new Popover(popoverEl, options);
+
+window.addEventListener('load', () => {
+  containerOption = getContainerOption(window.innerWidth);
+  popover = createPopover(popoverTriggerEl, {
+    ...BASE_OPTIONS,
+    container: containerOption,
+  });
+});
+
+window.addEventListener('resize', (e) => {
+  const newContainerOption = getContainerOption(e.target.innerWidth);
+  if (containerOption !== newContainerOption) {
+    popover.dispose();
+    popover = createPopover(popoverTriggerEl, {
+      ...BASE_OPTIONS,
+      container: newContainerOption,
+    });
+    containerOption = newContainerOption;
+  }
+});
